@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+// 
+$font-family-base: 'Open Sans', sans-serif;
+// $font-size-base: 1;
+$headings-font-family: 'Poppins', sans-serif;
+
+$btn-border-radius: 2rem;
+$primary: hsl(322, 100%, 66%);
+
+@import '/node_modules/bootstrap/scss/bootstrap.scss';

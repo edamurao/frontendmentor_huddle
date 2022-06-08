@@ -1,0 +1,81 @@
+.footer {
+    background-color: hsl(192, 100%, 9%);
+    color: white;
+
+    svg {
+        g {
+            path {
+                fill: white;
+            }
+        }
+    }
+
+    .bottom-menu {
+        padding-top: 32px;        
+    }
+
+    .copyright {
+        font-size: 12px;
+        padding-bottom: 32px;
+    }
+
+    padding-bottom: 32px;
+    padding-left: 24px;
+}
+
+.subfooter {
+    position: relative;
+    height: 125px;
+
+    .card {
+        text-align: center;
+        border-radius: 16px;
+        width: 95%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -100px;
+    }
+
+    .card-body {
+        padding: 40px 0;
+    }
+
+    .card-title {
+        color: black;
+    }
+
+    .btn {
+        color: white;
+        padding: 12px 64px;
+        font-size: 12px;
+    }
+}
+
+.contact {
+    position: relative;
+
+    svg {
+        position: absolute;
+        top: 6px;
+    }
+
+    p {
+        padding-left: 24px;
+    }
+}
+
+.footer-brands {
+    position: relative;
+    text-align: center;
+    padding-bottom: 16px;
+    div {
+        display: inline-block;
+        border: 1px solid white;
+        margin: 8px 8px;
+        padding: 4px 8px;
+        text-align: center;
+        border-radius: 48px;
+    }
+}

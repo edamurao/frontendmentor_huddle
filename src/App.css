@@ -1,4 +1,12 @@
-.App {
+.background-content {
+  background-image: url('assets/img/bg-hero-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  
+  background-color: #edfbfe;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +43,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

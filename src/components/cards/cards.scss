@@ -1,0 +1,25 @@
+.cards {
+    padding-top: 80px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-bottom: 225px;
+}
+
+.card-item {
+    margin-bottom: 40px;
+    border-radius: 16px;
+
+    .card-body {
+        padding: 3rem;
+
+        .card-title {
+            color: black;
+            margin-top: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-text {
+            color: hsl(208, 11%, 55%);
+        }
+    }
+}
