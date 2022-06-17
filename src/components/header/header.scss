@@ -1,0 +1,22 @@
+@import '/node_modules/bootstrap/scss/functions';
+@import '/node_modules/bootstrap/scss/variables';
+@import '/node_modules/bootstrap/scss/mixins/breakpoints';
+
+header {
+    padding-top: 12px;
+}
+
+.try{
+    font-weight: 600;
+    font-size: 12px;
+    color: #000;    
+    padding-left: 28px;
+    padding-right: 28px;
+    border:none;
+    background-color: white;
+
+    @include media-breakpoint-up(xxl){
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+}

@@ -1,14 +1,48 @@
+@import '/node_modules/bootstrap/scss/functions';
+@import '/node_modules/bootstrap/scss/variables';
+@import '/node_modules/bootstrap/scss/mixins/breakpoints';
+
+$desktop: xl;
+
 .content-main {
-    padding: 0 32px;
-    padding-bottom: 32px;;
+    padding: 40px 36px 40px 36px;
+    
+    @include media-breakpoint-up($desktop){
+        padding-bottom: 56px;
+        .left-content{
+            padding-left: 0;            
+        }
+        h2{
+            padding-right: 100px;
+        }
+        p{
+            padding-right: 52px;
+        }
+    }
 
     h2 {
-        margin: 32px 0;
+        margin: 32px 4px;
+        text-align: center;
+
+        @include media-breakpoint-up($desktop){
+            text-align: left;
+        }
+    }
+
+    p{
+        text-align: center;
+        @include media-breakpoint-up($desktop){
+            text-align: left;
+        }
     }
 
     .content {
         margin: 32px 0;
-        
+    }
+
+    .mockup-img{
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -16,6 +50,11 @@
     text-align: center;
     margin-top: 32px;
     margin-bottom: 56px;
+    
+    @include media-breakpoint-up($desktop){
+        text-align: left;
+    }
+
     .btn {
         color: white;
         padding: 12px 64px;

@@ -4,7 +4,7 @@ import Content from './components/content/content';
 import CardsMain from './components/cards/cards_main';
 import Footer from './components/footer/footer';
 import React from 'react';
-import './App.css';
+import './App.scss';
 // import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {

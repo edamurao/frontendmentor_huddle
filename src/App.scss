@@ -1,0 +1,19 @@
+@import '/node_modules//bootstrap/scss/functions';
+@import '/node_modules//bootstrap/scss/variables';
+@import '/node_modules/bootstrap/scss/mixins/breakpoints';
+
+.background-content {
+    background-image: url('assets/img/bg-hero-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #edfbfe;
+    @include media-breakpoint-up(xl){
+        background-image: url('assets/img/bg-hero-desktop.svg');
+    }
+    
+}
+
+body{
+    font-size: 18px;
+}

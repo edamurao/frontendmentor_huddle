@@ -1,6 +1,15 @@
+@import '/node_modules/bootstrap/scss/functions';
+@import '/node_modules/bootstrap/scss/variables';
+@import '/node_modules/bootstrap/scss/mixins/breakpoints';
+
+$desktop: xl;
+
 .footer {
     background-color: hsl(192, 100%, 9%);
     color: white;
+    padding-bottom: 32px;
+    padding-left: 4px;
+    padding-right: 4px;
 
     svg {
         g {
@@ -17,10 +26,17 @@
     .copyright {
         font-size: 12px;
         padding-bottom: 32px;
+        font-family: 'Poppins';
+        font-weight: 600;
     }
 
-    padding-bottom: 32px;
-    padding-left: 24px;
+    .footer-logo{
+        padding-bottom: 28px;
+    }
+
+    // @include media-breakpoint-up($desktop) {
+        
+    // }
 }
 
 .subfooter {
@@ -29,13 +45,13 @@
 
     .card {
         text-align: center;
-        border-radius: 16px;
-        width: 95%;
+        border-radius: 16px;        
         position: absolute;
         left: 0;
         right: 0;
         margin: auto;
         top: -100px;
+        margin: 0;
     }
 
     .card-body {
@@ -44,13 +60,30 @@
 
     .card-title {
         color: black;
+        padding-bottom: 16px;
+        font-size: 20px;
     }
 
     .btn {
         color: white;
-        padding: 12px 64px;
-        font-size: 12px;
+        padding: 12px 48px;
+        font-size: 11px;
+        font-weight: bold;
     }
+
+    @include media-breakpoint-up($desktop) {
+        max-width: 700px;
+        margin: auto;
+        .card-title{
+            font-size: 1.75rem;            
+            padding-bottom: 16px;
+        }
+
+        .btn{
+            font-size: 1rem;
+        }
+    }
+
 }
 
 .contact {
@@ -62,7 +95,8 @@
     }
 
     p {
-        padding-left: 24px;
+        padding-left: 48px;
+        font-size: 18px;
     }
 }
 

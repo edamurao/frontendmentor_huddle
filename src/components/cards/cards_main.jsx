@@ -26,24 +26,29 @@ export default function CardsMain() {
     ];
 
     return (
-        <div className="container-fluid cards">
-            {cardArr.map((item, idx) =>
+        <div className="container cards">
+            {cardArr.map((item, idx) => {
+                const rowReverse = (idx % 2) === 0 ? 'reverse' : '';
                 
+                return (
                     <div className="card-item card border-light shadow-sm" key={idx}>
                         <div className="card-body">
-                            <div className="ratio ratio-4x3">
-                                <img src={item.img} alt="" />
+                            <div className={"flex-container " + rowReverse}>
+                                <img className="img" src={item.img} alt="" />
+                                <div>
+                                    <div className="description">
+                                        <h3 className="card-title">
+                                            {item.title}
+                                        </h3>
+                                        <p className="card-text">
+                                            {item.content}
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <h5 className="card-title text-center">
-                                {item.title}
-                            </h5>
-                            <p className="card-text text-center">
-                                {item.content}
-                            </p>
                         </div>
-                    </div>
-                
-            )}
+                    </div>)
+            })}
         </div>
     )
 }

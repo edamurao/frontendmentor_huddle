@@ -1,8 +1,19 @@
+@import '/node_modules/bootstrap/scss/functions';
+@import '/node_modules/bootstrap/scss/variables';
+@import '/node_modules/bootstrap/scss/mixins/breakpoints';
+
+$desktop: xl;
+
 .cards {
     padding-top: 80px;
     padding-left: 24px;
     padding-right: 24px;
     margin-bottom: 225px;
+
+    @include media-breakpoint-up($desktop) {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
 }
 
 .card-item {
@@ -20,6 +31,46 @@
 
         .card-text {
             color: hsl(208, 11%, 55%);
+            font-size: 15px;
         }
     }
+
+    .img {
+        width: 100%;
+        height: auto;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    @include media-breakpoint-up($desktop) {
+        .card-body {
+            padding-left: 120px;
+            .card-title {
+                margin-top: 0;
+            }
+        }
+
+        .description {
+            text-align: left;
+            width: 500px;
+        }
+
+        .flex-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .img {
+            width: 400px;
+            
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
 }
