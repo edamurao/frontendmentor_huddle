@@ -8,8 +8,18 @@ $desktop: xl;
     background-color: hsl(192, 100%, 9%);
     color: white;
     padding-bottom: 32px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    .footer-container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer-menu {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 
     svg {
         g {
@@ -20,7 +30,20 @@ $desktop: xl;
     }
 
     .bottom-menu {
-        padding-top: 32px;        
+        padding-top: 32px;
+
+        .bm-link {
+            padding-bottom: 16px;
+
+            a {
+                text-decoration: none;
+                color: white;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 
     .copyright {
@@ -28,30 +51,37 @@ $desktop: xl;
         padding-bottom: 32px;
         font-family: 'Poppins';
         font-weight: 600;
+        text-align: center;
     }
 
-    .footer-logo{
+    .footer-logo {
         padding-bottom: 28px;
+        padding-top: 16px;
+        padding-left: 0;
     }
 
-    // @include media-breakpoint-up($desktop) {
-        
-    // }
+    @include media-breakpoint-up($desktop) {
+        .footer-logo {
+            padding-top: 97px;
+        }
+
+        .copyright {
+            text-align: right;
+        }
+    }
 }
 
 .subfooter {
-    position: relative;
-    height: 125px;
+    height: 97px;
 
     .card {
         text-align: center;
-        border-radius: 16px;        
-        position: absolute;
+        border-radius: 16px;
         left: 0;
         right: 0;
         margin: auto;
-        top: -100px;
-        margin: 0;
+        max-width: 351px;
+        top: -115px;
     }
 
     .card-body {
@@ -61,7 +91,7 @@ $desktop: xl;
     .card-title {
         color: black;
         padding-bottom: 16px;
-        font-size: 20px;
+        font-size: 1.125rem;
     }
 
     .btn {
@@ -69,17 +99,32 @@ $desktop: xl;
         padding: 12px 48px;
         font-size: 11px;
         font-weight: bold;
+
+        &:hover {
+            border-color: hsl(322, 100%, 80%);
+            ;
+            background-color: hsl(322, 100%, 80%);
+        }
     }
 
     @include media-breakpoint-up($desktop) {
-        max-width: 700px;
-        margin: auto;
-        .card-title{
-            font-size: 1.75rem;            
-            padding-bottom: 16px;
+        .card {
+            max-width: 800px;
+            top: -179px;
         }
 
-        .btn{
+        .card-body {
+            padding-top: 78px;
+            padding-bottom: 52px;
+        }
+
+        .card-title {
+            font-size: 2rem;
+            padding-bottom: 0;
+            margin-bottom: 39px;
+        }
+
+        .btn {
             font-size: 1rem;
         }
     }
@@ -88,6 +133,8 @@ $desktop: xl;
 
 .contact {
     position: relative;
+    padding-left: 0;
+    padding-right: 0;
 
     svg {
         position: absolute;
@@ -95,21 +142,43 @@ $desktop: xl;
     }
 
     p {
-        padding-left: 48px;
-        font-size: 18px;
+        padding-left: 36px;
+        font-size: 16px;
+    }
+
+    @include media-breakpoint-up($desktop) {
+        p {
+            font-size: inherit;
+        }
     }
 }
 
 .footer-brands {
     position: relative;
     text-align: center;
+    padding-top: 24px;
     padding-bottom: 16px;
-    div {
+
+    a {
         display: inline-block;
+        width: 36px;
+        height: 36px;
         border: 1px solid white;
         margin: 8px 8px;
         padding: 4px 8px;
         text-align: center;
         border-radius: 48px;
+
+        svg {
+            color: white;
+        }
+
+        &:hover {
+            border-color: hsl(322, 100%, 66%);
+
+            svg {
+                color: hsl(322, 100%, 66%);
+            }
+        }
     }
 }

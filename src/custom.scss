@@ -8,5 +8,6 @@ $headings-font-family: 'Poppins', sans-serif;
 
 $btn-border-radius: 2rem;
 $primary: hsl(322, 100%, 66%);
+$box-shadow-sm: 0px 0px 24px 4px rgba(0,0,0,0.08);
 
 @import '/node_modules/bootstrap/scss/bootstrap.scss';

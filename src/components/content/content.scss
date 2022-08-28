@@ -5,44 +5,59 @@
 $desktop: xl;
 
 .content-main {
-    padding: 40px 36px 40px 36px;
-    
-    @include media-breakpoint-up($desktop){
-        padding-bottom: 56px;
-        .left-content{
-            padding-left: 0;            
-        }
-        h2{
-            padding-right: 100px;
-        }
-        p{
-            padding-right: 52px;
-        }
+    padding: 89px 36px 36px 36px;
+
+    .title {
+        text-align: center;
+        // line-height: 1.6;
+        font-weight: bold;
+        font-size: 1.5rem;
     }
 
-    h2 {
-        margin: 32px 4px;
+    p {
         text-align: center;
-
-        @include media-breakpoint-up($desktop){
-            text-align: left;
-        }
-    }
-
-    p{
-        text-align: center;
-        @include media-breakpoint-up($desktop){
-            text-align: left;
-        }
+        font-size: 16px;
     }
 
     .content {
         margin: 32px 0;
     }
 
-    .mockup-img{
+    .mockup-img {
         width: 100%;
         height: auto;
+    }
+
+    @include media-breakpoint-up($desktop) {
+        padding: 72px 20px;
+        display: flex;
+        align-items: center;
+
+        .title {
+            text-align: left;
+            margin-right: 124px;
+            font-size: 2rem;
+        }
+
+        p {
+            text-align: left;
+            font-size: inherit;
+        }
+
+        .description {
+            display: inline-block;
+            // margin-right: 80px;
+            padding-right: 80px;
+        }
+
+        .mockup-container {
+            display: inline-block;
+        }
+
+        .mockup-img {
+            width: 680px;
+            height: auto;
+        }
     }
 }
 
@@ -50,8 +65,8 @@ $desktop: xl;
     text-align: center;
     margin-top: 32px;
     margin-bottom: 56px;
-    
-    @include media-breakpoint-up($desktop){
+
+    @include media-breakpoint-up($desktop) {
         text-align: left;
     }
 
@@ -60,6 +75,11 @@ $desktop: xl;
         padding: 12px 64px;
         font-size: 12px;
         font-weight: 700;
+
+        &:hover {
+            border-color: hsl(322, 100%, 80%);
+            ;
+            background-color: hsl(322, 100%, 80%);
+        }
     }
 }
-

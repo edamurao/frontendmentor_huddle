@@ -1,18 +1,21 @@
 @import '/node_modules/bootstrap/scss/functions';
 @import '/node_modules/bootstrap/scss/variables';
 @import '/node_modules/bootstrap/scss/mixins/breakpoints';
+@import '/node_modules/bootstrap/scss//mixins/box-shadow';
 
 $desktop: xl;
 
 .cards {
-    padding-top: 80px;
+    padding-top: 58px;
     padding-left: 24px;
     padding-right: 24px;
-    margin-bottom: 225px;
+    margin-bottom: 234px;
 
     @include media-breakpoint-up($desktop) {
-        padding-left: 64px;
-        padding-right: 64px;
+        padding-left: 44px;
+        padding-right: 44px;
+        padding-top: 161px;
+        margin-bottom: 343px;
     }
 }
 
@@ -27,11 +30,12 @@ $desktop: xl;
             color: black;
             margin-top: 4rem;
             margin-bottom: 1rem;
+            font-size: 18px;
         }
 
         .card-text {
             color: hsl(208, 11%, 55%);
-            font-size: 15px;
+            font-size: 12px;
         }
     }
 
@@ -47,8 +51,14 @@ $desktop: xl;
     @include media-breakpoint-up($desktop) {
         .card-body {
             padding-left: 120px;
+
             .card-title {
                 margin-top: 0;
+                font-size: 1.75rem;
+            }
+
+            .card-text {
+                font-size: inherit;
             }
         }
 
@@ -65,7 +75,7 @@ $desktop: xl;
 
         .img {
             width: 400px;
-            
+
         }
 
         .reverse {

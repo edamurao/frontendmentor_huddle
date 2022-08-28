@@ -2,21 +2,44 @@
 @import '/node_modules/bootstrap/scss/variables';
 @import '/node_modules/bootstrap/scss/mixins/breakpoints';
 
+$desktop: xl;
+
 header {
-    padding-top: 12px;
+    padding-top: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    .navbar{
+        padding: 0;
+    }
+
+    .logo{
+        padding: 0;
+        margin: 0;
+    }
+
+    @include media-breakpoint-up($desktop){
+        padding-top: 46px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
 }
 
 .try{
     font-weight: 600;
     font-size: 12px;
-    color: #000;    
+    color: hsla(0,0%, 0%);
     padding-left: 28px;
     padding-right: 28px;
     border:none;
     background-color: white;
 
-    @include media-breakpoint-up(xxl){
-        padding-left: 48px;
-        padding-right: 48px;
+    &:hover{
+        color: hsla(0,0%, 50%);        
+        background-color: white;
+    }
+
+    @include media-breakpoint-up($desktop){
+        padding: 12px 72px;        
     }
 }
